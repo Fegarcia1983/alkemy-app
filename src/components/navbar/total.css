@@ -1,0 +1,10 @@
+.fg-totalNavBar {
+   align-items: center;
+   color: whitesmoke;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.fg-totalNavBar h3 {
+   margin-right: 5px;
+}

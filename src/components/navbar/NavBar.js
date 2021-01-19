@@ -1,18 +1,30 @@
 import React from 'react';
-import {Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import {Navbar, Nav } from 'react-bootstrap';
+import {LinkContainer} from 'react-router-bootstrap'
+import { Total } from './Total';
 
 
 export const NavBar = () => {
    return (
       <>
          <Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            <Navbar.Brand href="#home">Alkemy</Navbar.Brand>
             <Nav className="mr-auto">
-               <Nav.Link href="#home">Home</Nav.Link>
-               <Nav.Link href="#features">Features</Nav.Link>
-               <Nav.Link href="#pricing">Pricing</Nav.Link>
+               < LinkContainer to="/">
+                  <Nav.Link to="/">home</Nav.Link>
+               </ LinkContainer>
+               <LinkContainer to="/admin">
+                  <Nav.Link to="/admin">admin</Nav.Link>
+               </ LinkContainer >
+               <LinkContainer to="/newregister">
+                  <Nav.Link to="/newregister">new Register</Nav.Link>
+               </ LinkContainer >
+               <LinkContainer to="/newcategory">
+                  <Nav.Link to="/newcategory">new Category</Nav.Link>
+               </ LinkContainer >
             </Nav>
+            <Total />
          </Navbar>
       </>
-   )
+   );
 }
