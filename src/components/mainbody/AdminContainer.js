@@ -43,7 +43,7 @@ export const AdminContainer = () => {
       })
 
    }
-   console.log(registers);
+
    return (
       <div>
          < Filters handler={filterHandler} total={registers.total} />

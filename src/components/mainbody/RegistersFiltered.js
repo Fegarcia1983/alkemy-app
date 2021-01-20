@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import { RegisterAdmin } from './RegisterAdmin'
 
 export const RegistersFiltered = ({registers, filterHandler}) => {

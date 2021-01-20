@@ -34,7 +34,7 @@ export const Filters = ({handler, total}) => {
             <input type="text" id="concept" name="concept" onChange={(e)=>{handler('NO', '*', '*', '*', e.target.value, '*')}}/>
             <h5>Categoría</h5>
             <label htmlFor="category">Categoría:</label>
-            <select name="category" id="category" onChange={(e)=>{handler('NO', '*', '*', '*', '*', e.target.value)}}>
+            <select name="category" id="category" value="NO"onChange={(e)=>{handler('NO', '*', '*', '*', '*', e.target.value)}}>
                <option value='NO'>Todas</option>
                {
                   categories.map(cat => (

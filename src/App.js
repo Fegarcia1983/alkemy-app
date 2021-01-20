@@ -7,6 +7,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { NewRegister } from './components/mainbody/NewRegister';
 
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/admin">
             < AdminContainer />
+          </Route>
+          <Route path="/newregister">
+            < NewRegister />
           </Route>
         </Switch>
       </div>
