@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import { RegistersFiltered } from './RegistersFiltered'
-import { fetchRegistersFiltered } from '../../helpers/fetchRegistersFiltered'
-import { Filters } from './Filters'
+import { RegistersFiltered } from '../registers-filtered/RegistersFiltered'
+import { fetchRegistersFiltered } from '../../../helpers/fetchRegistersFiltered'
+import { Filters } from '../filters/Filters'
 
-export const AdminContainer = () => {
+export const AdminContainer = ({totalHandler}) => {
 
    const [registers, setRegisters] = useState({
       status: {},
@@ -47,7 +47,7 @@ export const AdminContainer = () => {
    return (
       <div>
          < Filters handler={filterHandler} total={registers.total} />
-         < RegistersFiltered registers={registers} filterHandler={filterHandler}/>
+         < RegistersFiltered registers={registers} filterHandler={filterHandler} totalHandler={totalHandler}/>
       </div>
    )
 }

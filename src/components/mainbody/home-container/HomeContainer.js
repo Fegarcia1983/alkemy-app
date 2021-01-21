@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { fetchRegisters } from '../../helpers/fetchRegisters'
-import { Register } from './Register'
+import { fetchRegisters } from '../../../helpers/fetchRegisters'
+import { Register } from '../register/Register'
 
 export const HomeContainer = () => {
 
@@ -40,7 +40,7 @@ export const HomeContainer = () => {
                date={reg.date}
                category_id={reg.category_id}
                concept={reg.concept}
-               mount={reg.mount}
+               amount={reg.amount}
                />
             ))
             }

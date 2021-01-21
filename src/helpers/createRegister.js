@@ -14,7 +14,7 @@ export const createRegister = async(id) => {
       in_out: (id.target.form.egreso.checked)?0:1,
       date: id.target.form.date.value,
       concept: id.target.form.concept.value,
-      mount: parseFloat(id.target.form.amount.value).toFixed(2),
+      amount: parseFloat(id.target.form.amount.value).toFixed(2),
       category_id: Number(category)
    }
 

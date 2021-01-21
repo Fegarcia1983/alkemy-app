@@ -13,7 +13,7 @@ export const fetchRegisters = async(lim, start, sort) => {
          date: reg.date.substring(0, reg.date.indexOf("T")),
          category_id: reg.categories.name,
          concept: reg.concept,
-         mount: Number(reg.mount).toFixed(2)
+         amount: Number(reg.amount).toFixed(2)
       }
    })]
 

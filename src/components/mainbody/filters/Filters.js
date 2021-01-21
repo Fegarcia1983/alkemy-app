@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { fetchcategories } from '../../helpers/fetchCategories'
+import { fetchcategories } from '../../../helpers/fetchCategories'
 
 export const Filters = ({handler, total}) => {
 
@@ -34,7 +34,7 @@ export const Filters = ({handler, total}) => {
             <input type="text" id="concept" name="concept" onChange={(e)=>{handler('NO', '*', '*', '*', e.target.value, '*')}}/>
             <h5>Categoría</h5>
             <label htmlFor="category">Categoría:</label>
-            <select name="category" id="category" value="NO"onChange={(e)=>{handler('NO', '*', '*', '*', '*', e.target.value)}}>
+            <select name="category" id="category" value="NO" onChange={(e)=>{handler('NO', '*', '*', '*', '*', e.target.value)}}>
                <option value='NO'>Todas</option>
                {
                   categories.map(cat => (
@@ -43,6 +43,7 @@ export const Filters = ({handler, total}) => {
                }
             </select>
             </form>
+            <button onClick={()=>{handler('NO','NO', 'NO', 'NO', 'NO', 'NO')}}>Claer Filters</button>
             <div className="fg-total">
                <h4>Total:</h4>
                <h3>{total}</h3>

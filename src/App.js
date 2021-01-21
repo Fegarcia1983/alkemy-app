@@ -1,30 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavBar } from './components/navbar/NavBar';
-import { HomeContainer } from './components/mainbody/HomeContainer';
-import { AdminContainer } from './components/mainbody/AdminContainer';
+import { HomeContainer } from './components/mainbody/home-container/HomeContainer';
+import { AdminContainer } from './components/mainbody/admin-container/AdminContainer';
+import { NewRegister } from './components/mainbody/new-register/NewRegister';
+import { UpdateContainer } from './components/mainbody/update-register-container/UpdateContainer';
+import {fetchOnlyTotal} from './helpers/fetchOnlyTotal'
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import { NewRegister } from './components/mainbody/NewRegister';
-
 
 function App() {
+
+  const [total, setTotal] = useState(0)
+
+   const [updateTotal, setUpdateTotlal] = useState(false)
+
+   useEffect(() => {
+      fetchOnlyTotal()
+         .then( amount => {
+            setTotal(amount);
+         })
+   },[updateTotal])
+
+   const totalHandler = () => {
+      setUpdateTotlal(!updateTotal)
+   }
+
   return (
     <Router>
       <div className="App">
-        < NavBar />
+        < NavBar total={total}/>
         <Switch>
-        <Route path="/" exact>
-            < HomeContainer />
-          </Route>
           <Route path="/admin">
-            < AdminContainer />
+            <AdminContainer totalHandler={totalHandler} />
           </Route>
-          <Route path="/newregister">
-            < NewRegister />
-          </Route>
+          <Route path="/newregister" component={ NewRegister } />
+          <Route path="/updateregister/:id" component={ UpdateContainer } />
+          <Route path="/" component={ HomeContainer } />
         </Switch>
       </div>
     </Router>

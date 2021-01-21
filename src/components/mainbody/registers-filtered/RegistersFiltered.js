@@ -1,7 +1,8 @@
 import React  from 'react'
-import { RegisterAdmin } from './RegisterAdmin'
+import './registersFiltered.css'
+import { RegisterAdmin } from '../registers-admin/RegisterAdmin'
 
-export const RegistersFiltered = ({registers, filterHandler}) => {
+export const RegistersFiltered = ({registers, filterHandler, totalHandler}) => {
 
    return (
       <table>
@@ -23,9 +24,10 @@ export const RegistersFiltered = ({registers, filterHandler}) => {
                date={reg.date}
                category_id={reg.category_id}
                concept={reg.concept}
-               mount={reg.mount}
+               amount={reg.amount}
                id={reg.id}
                handler={filterHandler}
+               totalHandler={totalHandler}
                />
             ))
             }

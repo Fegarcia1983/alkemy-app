@@ -1,14 +1,14 @@
 import React from 'react';
 import {Navbar, Nav } from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap'
-import { Total } from './Total';
+import { Total } from './total/Total';
 
+export const NavBar = ({total}) => {
 
-export const NavBar = () => {
    return (
       <>
          <Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="#home">Alkemy</Navbar.Brand>
+            <Navbar.Brand>Alkemy</Navbar.Brand>
             <Nav className="mr-auto">
                < LinkContainer to="/">
                   <Nav.Link to="/">home</Nav.Link>
@@ -23,7 +23,7 @@ export const NavBar = () => {
                   <Nav.Link to="/newcategory">new Category</Nav.Link>
                </ LinkContainer >
             </Nav>
-            <Total />
+            <Total total={total}/>
          </Navbar>
       </>
    );

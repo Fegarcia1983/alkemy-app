@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import { fetchcategories } from '../../helpers/fetchCategories'
-import { createRegister } from '../../helpers/createRegister'
+import { fetchcategories } from '../../../helpers/fetchCategories'
+import { createRegister } from '../../../helpers/createRegister'
 
 export const NewRegister = () => {
 
@@ -15,21 +15,21 @@ export const NewRegister = () => {
 
    return (
       <form>
-         <h5>Concepto</h5>
-         <label htmlFor="concept">Concepto:</label>
+         <h4>NEW REGISTER</h4>
+         <label htmlFor="concept">Concept:</label>
          <input type="text" id="concept" name="concept" required/>
-         <h5>Movimiento</h5>
+         <h5>Type</h5>
          <input type="radio" id="egreso" name="movment"/>
-         <label htmlFor="egreso">Egreso</label>
+         <label htmlFor="egreso">OUT</label>
          <input type="radio" id="ingreso" name="movment"/>
-         <label htmlFor="ingreso">Ingreso</label>
-         <h5>Fecha</h5>
-         <label htmlFor="date">Fecha</label>
+         <label htmlFor="ingreso">IN</label>
+         <br/>
+         <label htmlFor="date">Date:</label>
          <input type="date" id="date" name="date" required/>
-         <h5>Importe</h5>
-         <label htmlFor="amount">Monto</label>
+         <br/>
+         <label htmlFor="amount">$:</label>
          <input type="number" id="amount" name="amount" required/>
-         <h5>Categoría</h5>
+         <h5>Category</h5>
          <select name="category" id="category">
             {
                categories.map(cat => (

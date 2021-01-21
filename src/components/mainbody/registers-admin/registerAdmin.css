@@ -1,0 +1,9 @@
+.fg-ingreso {
+   font-weight: bold;
+   color: green;
+}
+
+.fg-egreso {
+   font-weight: bold;
+   color: red;
+}
