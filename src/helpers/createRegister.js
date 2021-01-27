@@ -33,7 +33,7 @@ export const createRegister = async(id) => {
    });
 
    const  response  = await fetchResponse.json();
-   window.location.assign("http://localhost:3001")
+   window.location.assign("/")
    return response;
 
 }

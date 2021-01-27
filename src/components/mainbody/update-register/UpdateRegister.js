@@ -1,6 +1,10 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
+import { fetchUpdateRegister } from '../../../helpers/fetchUpdateRegister'
 
 export const UpdateRegister = ({categories}) => {
+
+   const id = useParams()
 
    return (
       <form>
@@ -22,7 +26,7 @@ export const UpdateRegister = ({categories}) => {
             }
          </select>
          <br/>
-         <button type="submit">Update !</button>
+         <button type="submit" onClick={(e) => {fetchUpdateRegister(e, id)}}>Update !</button>
       </form>
    )
 }

@@ -23,14 +23,21 @@ export const UpdateContainer = () => {
 
    useEffect(() => {
       updateFormRegister( id )
-         .then( register => {
-            setUpdateRegister( register.data )
+         .then( reg => {
+            setUpdateRegister( {
+               id: reg.data.id,
+               in_out: (reg.data.in_out)?'ingreso':'egreso',
+               date: reg.data.date.substring(0, reg.data.date.indexOf("T")),
+               category: reg.data.categories.name,
+               concept: reg.data.concept,
+               amount: Number(reg.data.amount).toFixed(2)
+             } )
          })
    }, [ id ])
 
    return (
       <div className="fg-updateContainer">
-         < UpdateRegister categories={ categories } />
+         < UpdateRegister categories={ categories } register={ updateRegister } />
          < CardRegister register={ updateRegister } />
       </div>
    )

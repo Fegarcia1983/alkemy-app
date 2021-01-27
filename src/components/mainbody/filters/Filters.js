@@ -17,25 +17,25 @@ export const Filters = ({handler, total}) => {
          <h3>Filters</h3>
          <div>
             <form>
-            <h5>Movimiento</h5>
+            <h5>Type</h5>
             <input type="radio" id="engreso" name="movment" onClick={()=>{handler('NO',0, '*', '*', '*', '*')}}/>
-            <label htmlFor="engreso">Egreso</label>
+            <label htmlFor="engreso">Out</label>
             <input type="radio" id="ingreso" name="movment" onClick={()=>{handler('NO',1, '*','*', '*', '*')}}/>
-            <label htmlFor="ingreso">Ingreso</label>
+            <label htmlFor="ingreso">In</label>
             <input type="radio" id="todos" name="movment" onClick={()=>{handler('NO','NO', '*', '*', '*', '*')}}/>
-            <label htmlFor="todos">Todos</label>
-            <h5>Fecha</h5>
-            <label htmlFor="fromdate">Desde</label>
+            <label htmlFor="todos">All</label>
+            <h5>Date</h5>
+            <label htmlFor="fromdate">From:</label>
             <input type="date" id="fromdate" name="date" onChange={(e)=>{handler('NO', '*', e.target.value, '*', '*', '*')}}/>
-            <label htmlFor="todate">Hasta</label>
+            <label htmlFor="todate">To:</label>
             <input type="date" id="todate" name="date" onChange={(e)=>{handler('NO', '*', '*', e.target.value, '*', '*')}}/>
-            <h5>Concepto</h5>
-            <label htmlFor="concept">Concepto:</label>
+            <h5>More</h5>
+            <label htmlFor="concept">Concept:</label>
             <input type="text" id="concept" name="concept" onChange={(e)=>{handler('NO', '*', '*', '*', e.target.value, '*')}}/>
-            <h5>Categoría</h5>
-            <label htmlFor="category">Categoría:</label>
+            <br/>
+            <label htmlFor="category">Category:</label>
             <select name="category" id="category" value="NO" onChange={(e)=>{handler('NO', '*', '*', '*', '*', e.target.value)}}>
-               <option value='NO'>Todas</option>
+               <option value='NO'>All</option>
                {
                   categories.map(cat => (
                      <option key={cat.id} value={cat.id}>{cat.name}</option>
