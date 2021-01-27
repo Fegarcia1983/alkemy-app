@@ -1,4 +1,12 @@
 .fg-updateContainer {
    display:flex;
    flex-wrap: wrap;
+   justify-content: space-evenly;
+   padding-top: 10%;
+   position: relative;
+}
+
+.fg-updateIco {
+   position: absolute;
+   top: 50%;
 }

@@ -4,6 +4,7 @@ import { fetchcategories } from '../../../helpers/fetchCategories'
 import { updateFormRegister } from '../../../helpers/updateFormRegister'
 import { CardRegister } from '../card-register/CardRegister'
 import { UpdateRegister } from '../update-register/UpdateRegister'
+import UpdateIco from '../../../assets/images/update.png'
 import './updateContainer.css'
 
 export const UpdateContainer = () => {
@@ -37,6 +38,7 @@ export const UpdateContainer = () => {
 
    return (
       <div className="fg-updateContainer">
+         <img className="fg-updateIco" src={UpdateIco} alt='update_image'/>
          < UpdateRegister categories={ categories } register={ updateRegister } />
          < CardRegister register={ updateRegister } />
       </div>

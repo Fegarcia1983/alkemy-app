@@ -12,10 +12,10 @@ export const RegisterAdmin = ({in_out, date, category_id, concept, amount, id, h
          <td className={`fg-${in_out}`}>{in_out}</td>
          <td>{amount}</td>
          <td>{category_id}</td>
-         <td><button onClick={() => {deleteRegister(id, handler, totalHandler)}} >Borrar</button></td>
+         <td><button className="btn btn-danger" onClick={() => {deleteRegister(id, handler, totalHandler)}} >Borrar</button></td>
          <td>{
             <Link to={`/updateregister/${id}`}>
-               <button>Modificar</button>
+               <button className="btn btn-secondary" >Modificar</button>
             </Link>
             }
          </td>

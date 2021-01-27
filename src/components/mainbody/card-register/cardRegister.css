@@ -1,0 +1,24 @@
+.fg-updated {
+   background-color: darkslategray;
+   color: whitesmoke;
+   border-radius: 25px;
+   display: flex;
+   flex-direction: column;
+   height: 50vh;
+   justify-content: space-evenly;
+   padding: 1.5%;
+   width: 15%;
+}
+
+.fg-updated h3 {
+   font-size: 2rem;
+}
+
+.fg-updated h5 {
+   font-size: 1.5rem;
+}
+
+.fg-updated p {
+   font-size: 1.25rem;
+   text-align: right;
+}

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { RegistersFiltered } from '../registers-filtered/RegistersFiltered'
 import { fetchRegistersFiltered } from '../../../helpers/fetchRegistersFiltered'
 import { Filters } from '../filters/Filters'
+import './adminContainer.css'
 
 export const AdminContainer = ({totalHandler}) => {
 
@@ -45,7 +46,7 @@ export const AdminContainer = ({totalHandler}) => {
    }
 
    return (
-      <div>
+      <div className="fg-adminContainer">
          < Filters handler={filterHandler} total={registers.total} />
          < RegistersFiltered registers={registers} filterHandler={filterHandler} totalHandler={totalHandler}/>
       </div>

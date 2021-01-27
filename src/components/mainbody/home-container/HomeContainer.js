@@ -22,29 +22,32 @@ export const HomeContainer = () => {
    },[])
 
    return (
-      <table>
-         <thead>
-            <tr>
-               <th>Fecha</th>
-               <th>Concepto</th>
-               <th>Movimiento</th>
-               <th>Importe</th>
-               <th>Categoría</th>
-            </tr>
-         </thead>
-         <tbody>
-            {
-            registers.data.map( reg => (
-               < Register key={reg.id}
-               in_out={reg.in_out}
-               date={reg.date}
-               category_id={reg.category_id}
-               concept={reg.concept}
-               amount={reg.amount}
-               />
-            ))
-            }
-         </tbody>
-      </table>
+      <div className="fg-mainContainer">
+         <h2>The 10 last registers order by date:</h2>
+         <table>
+            <thead>
+               <tr>
+                  <th>Fecha</th>
+                  <th>Concepto</th>
+                  <th>Movimiento</th>
+                  <th>Importe</th>
+                  <th>Categoría</th>
+               </tr>
+            </thead>
+            <tbody>
+               {
+               registers.data.map( reg => (
+                  < Register key={reg.id}
+                  in_out={reg.in_out}
+                  date={reg.date}
+                  category_id={reg.category_id}
+                  concept={reg.concept}
+                  amount={reg.amount}
+                  />
+               ))
+               }
+            </tbody>
+         </table>
+      </div>
    )
 }

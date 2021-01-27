@@ -1,0 +1,43 @@
+.fg-newRegister {
+   background-color: darksalmon;
+   border-radius: 25px;
+   display: flex;
+   flex-direction: column;
+   height: 50vh;
+   justify-content: space-evenly;
+   padding: 1.5%;
+   width: 15%;
+}
+
+.fg-checkNew {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+}
+
+.fg-checkNew>div {
+   align-items: center;
+   display: flex;
+}
+
+.fg-newRegister h3 {
+   font-size: 2rem;
+}
+
+.fg-newRegister h5 {
+   font-size: 1.75rem;
+   margin-top: 10%;
+}
+
+.fg-newRegister label {
+   font-size: 1.5rem;
+}
+
+.fg-newRegister select {
+   font-size: 1.25rem;
+}
+
+.fg-createButton {
+   font-size: 1.2rem;
+   font-weight: bold;
+}

@@ -1,10 +1,16 @@
 .fg-totalNavBar {
-   align-items: center;
+   align-items: baseline;
    color: whitesmoke;
    display: flex;
    flex-wrap: wrap;
 }
 
 .fg-totalNavBar h3 {
+   font-size: 2rem;
+   margin-right: 5px;
+}
+
+.fg-totalNavBar h4 {
+   font-size: 1.75rem;
    margin-right: 5px;
 }

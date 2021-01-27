@@ -1,0 +1,32 @@
+.fg-updater {
+   background-color: darkgray;
+   border-radius: 25px;
+   display: flex;
+   flex-direction: column;
+   height: 50vh;
+   justify-content: space-evenly;
+   padding: 1.5%;
+   width: 15%;
+}
+
+.fg-updater h3 {
+   font-size: 2rem;
+}
+
+.fg-updater h5 {
+   font-size: 1.5rem;
+   margin-top: 10%;
+}
+
+.fg-updater label {
+   font-size: 1.5rem;
+}
+
+.fg-updater select {
+   font-size: 1.25rem;
+}
+
+.fg-updateButton {
+   font-size: 1.2rem;
+   font-weight: bold;
+}

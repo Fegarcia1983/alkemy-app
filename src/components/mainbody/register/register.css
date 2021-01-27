@@ -1,3 +1,36 @@
+h2 {
+   font-size: 2.5rem;
+   margin: 2% 0%;
+}
+
+.fg-mainContainer {
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+}
+
+.fg-mainContainer table{
+   width: 60%;
+   text-align: center;
+}
+
+.fg-mainContainer thead {
+   font-size: 2rem;
+}
+
+.fg-mainContainer tbody {
+   font-size: 1.5rem;
+}
+
+.fg-mainContainer tbody tr {
+   border-bottom: 1px solid #ddd;
+}
+
+.fg-mainContainer tbody tr:hover {
+   background-color: #f5f5f5;
+}
+
 .fg-ingreso {
    font-weight: bold;
    color: green;

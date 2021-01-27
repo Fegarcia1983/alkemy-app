@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { NavBar } from './components/navbar/NavBar';
 import { HomeContainer } from './components/mainbody/home-container/HomeContainer';
 import { AdminContainer } from './components/mainbody/admin-container/AdminContainer';
-import { NewRegister } from './components/mainbody/new-register/NewRegister';
+import { NewRegisterContainer } from './components/mainbody/new-register-container/NewRegisterContainer';
 import { UpdateContainer } from './components/mainbody/update-register-container/UpdateContainer';
 import {fetchOnlyTotal} from './helpers/fetchOnlyTotal'
 import {
@@ -36,7 +36,7 @@ function App() {
           <Route path="/admin">
             <AdminContainer totalHandler={totalHandler} />
           </Route>
-          <Route path="/newregister" component={ NewRegister } />
+          <Route path="/newregister" component={ NewRegisterContainer } />
           <Route path="/updateregister/:id" component={ UpdateContainer } />
           <Route path="/" component={ HomeContainer } />
         </Switch>

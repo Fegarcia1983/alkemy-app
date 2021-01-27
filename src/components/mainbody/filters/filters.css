@@ -1,0 +1,44 @@
+.fg-filters h3 {
+   font-size: 2rem;
+}
+
+.fg-filters h5 {
+   font-size: 1.75rem;
+   margin-top: 10%;
+}
+
+.fg-filters label {
+   font-size: 1.5rem;
+}
+
+.fg-filters select {
+   font-size: 1.25rem;
+   margin-left: 20%;
+}
+
+.fg-filters {
+   background-color: darkgray;
+   border-radius: 25px;
+   height: fit-content;
+   margin-top: 10%;
+   padding: 1.5%;
+   width: 15%;
+}
+
+.fg-checkFilter {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+}
+
+.fg-checkFilter>div {
+   align-items: center;
+   display: flex;
+}
+
+.fg-total {
+   align-items: baseline;
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 4%;
+}

@@ -1,0 +1,42 @@
+.fg-filteredRegistersContainer {
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   width: 70%;
+}
+
+.fg-filteredRegistersContainer h2{
+   align-self: flex-start;
+   margin-left: 20%;
+}
+
+.fg-adminContainer table{
+   text-align: center;
+}
+
+.fg-adminContainer thead {
+   font-size: 2rem;
+}
+
+.fg-adminContainer tbody {
+   font-size: 1.5rem;
+}
+
+.fg-adminContainer tbody tr {
+   border-bottom: 1px solid #ddd;
+}
+
+.fg-adminContainer tbody tr:hover {
+   background-color: #f5f5f5;
+}
+
+.fg-ingreso {
+   font-weight: bold;
+   color: green;
+}
+
+.fg-egreso {
+   font-weight: bold;
+   color: red;
+}

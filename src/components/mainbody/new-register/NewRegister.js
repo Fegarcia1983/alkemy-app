@@ -1,36 +1,31 @@
-import React, {useState, useEffect} from 'react'
-import { fetchcategories } from '../../../helpers/fetchCategories'
+import React from 'react'
 import { createRegister } from '../../../helpers/createRegister'
+import './newRegister.css'
 
-export const NewRegister = () => {
-
-   const [categories, setCategories] = useState([])
-
-   useEffect(() => {
-      fetchcategories()
-         .then(categories => {
-            setCategories(categories)
-         })
-   }, [])
+export const NewRegister = ( { categories }) => {
 
    return (
-      <form>
-         <h4>NEW REGISTER</h4>
-         <label htmlFor="concept">Concept:</label>
-         <input type="text" id="concept" name="concept" required/>
+      <form className="form-group fg-newRegister">
+         <h3>NEW REGISTER</h3>
+         <label className="form-label" htmlFor="concept">Concept:</label>
+         <input className="form-control" type="text" id="concept" name="concept" required/>
          <h5>Type</h5>
-         <input type="radio" id="egreso" name="movment"/>
-         <label htmlFor="egreso">OUT</label>
-         <input type="radio" id="ingreso" name="movment"/>
-         <label htmlFor="ingreso">IN</label>
-         <br/>
-         <label htmlFor="date">Date:</label>
-         <input type="date" id="date" name="date" required/>
-         <br/>
-         <label htmlFor="amount">$:</label>
-         <input type="number" id="amount" name="amount" required/>
+         <div className="fg-checkNew">
+            <div class="form-check">
+            <input className="form-check-input" type="radio" id="egreso" name="movment"/>
+            <label className="form-check-label" htmlFor="egreso">OUT</label>
+            </div>
+            <div class="form-check">
+            <input className="form-check-input" type="radio" id="ingreso" name="movment"/>
+            <label className="form-check-label" htmlFor="ingreso">IN</label>
+            </div>
+         </div>
+         <label className="form-label" htmlFor="date">Date:</label>
+         <input className="form-control" type="date" id="date" name="date" required/>
+         <label className="form-label" htmlFor="amount">Amount$:</label>
+         <input className="form-control" type="number" id="amount" name="amount" required/>
          <h5>Category</h5>
-         <select name="category" id="category">
+         <select className="form-select" name="category" id="category">
             {
                categories.map(cat => (
                   <option key={cat.id} value={cat.id} id={cat.name}>{cat.name}</option>
@@ -38,7 +33,7 @@ export const NewRegister = () => {
             }
          </select>
          <br/>
-         <button type="submit" onClick={(e) => createRegister(e)}>Create !</button>
+         <button className="btn btn-success fg-createButton"type="submit" onClick={(e) => createRegister(e)}>Create !</button>
       </form>
    )
 }
